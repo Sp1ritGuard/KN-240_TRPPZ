@@ -3,12 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Моя перша сторінка</title>
+    <title>Практичне завдання</title>
     <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Вітаю на моєму сайті!</h1>
+    <h1 id="title">Вітаю на моєму сайті!</h1>
     <p>Це мій перший веб-документ.</p>
 
     <h2>Мої улюблені сайти:</h2>
@@ -54,7 +67,13 @@
         <button type="submit">Зареєструватися</button>
     </form>
 
-    <button>Натисни мене</button>
+    <button id="changeTextBtn">Натисни мене</button>
+
+    <script>
+        document.getElementById("changeTextBtn").addEventListener("click", function() {
+            document.getElementById("title").textContent = "Текст змінено!";
+        });
+    </script>
 
 </body>
 </html>
