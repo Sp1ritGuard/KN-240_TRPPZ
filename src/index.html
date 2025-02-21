@@ -1,38 +1,60 @@
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Практичне завдання</title>
+    <title>Моя перша сторінка</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
     <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            transition: background-color 0.5s;
+        .adaptive-container {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
         }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
+
+        .adaptive-box {
+            height: 200px;
+            background-color: lightcoral;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .adaptive-container {
+                flex-direction: column;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .adaptive-container {
+                flex-direction: row;
+            }
         }
     </style>
 </head>
-<body>
 
-    <h1 id="title">Вітаю на моєму сайті!</h1>
+<body>
+    <h1>Вітаю на моєму сайті!</h1>
     <p>Це мій перший веб-документ.</p>
 
-    <h2>Мої улюблені сайти:</h2>
+    <h2>Корисні посилання</h2>
     <ul>
         <li><a href="https://www.example.com" target="_blank">Example</a></li>
         <li><a href="https://github.com/Sp1ritGuard/KN-240_TRPPZ" target="_blank">GitHub</a></li>
         <li><a href="https://www.youtube.com/" target="_blank">YouTube</a></li>
     </ul>
 
-    <h2>Мій список</h2>
-    <ul>
+    <img src="https://via.placeholder.com/300" alt="Зображення" width="300">
+
+    <button class="styled-button" id="change-bg">Змінити фон</button>
+
+
+    <ul class="colored-list">
         <li>Елемент 1</li>
         <li>Елемент 2</li>
         <li>Елемент 3</li>
@@ -41,11 +63,7 @@
         <li>Елемент 6</li>
     </ul>
 
-    <div id="main-content">
-        Це основний контент сторінки. Він вирівняний по центру.
-    </div>
-
-    <img src="images/example.jpg" alt="Опис зображення" width="300" height="200">
+    <div id="full-width-text">Це текстовий блок, вирівняний по центру</div>
 
     <div class="container">
         <div class="box">1</div>
@@ -53,27 +71,12 @@
         <div class="box">3</div>
     </div>
 
-    <h2>Реєстрація</h2>
-    <form action="#" method="post">
-        <label for="name">Ім'я:</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="password">Пароль:</label>
-        <input type="password" id="password" name="password" required>
-
-        <button type="submit">Зареєструватися</button>
-    </form>
-
-    <button id="changeTextBtn">Натисни мене</button>
-
-    <script>
-        document.getElementById("changeTextBtn").addEventListener("click", function() {
-            document.getElementById("title").textContent = "Текст змінено!";
-        });
-    </script>
-
+    <div class="adaptive-container">
+        <div class="adaptive-box">Блок 1</div>
+        <div class="adaptive-box">Блок 2</div>
+        <div class="adaptive-box">Блок 3</div>
+    </div>
 </body>
+
 </html>
