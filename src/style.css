@@ -1,10 +1,9 @@
-/* Стилі для заголовків */
-h1, h2 {
+h1,
+h2 {
     color: darkblue;
     text-align: center;
 }
 
-/* Стилі для кнопки */
 .styled-button {
     background-color: blue;
     color: white;
@@ -18,7 +17,6 @@ h1, h2 {
     background-color: darkblue;
 }
 
-/* Стилі для списку */
 .colored-list li:nth-child(odd) {
     color: green;
 }
@@ -27,7 +25,6 @@ h1, h2 {
     color: blue;
 }
 
-/* Стилі для div */
 #full-width-text {
     width: 100%;
     text-align: center;
